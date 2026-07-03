@@ -1,0 +1,226 @@
+@import "tailwindcss";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+@import "@fontsource/ibm-plex-mono/600.css";
+@import "@fontsource/big-shoulders-display/600.css";
+@import "@fontsource/big-shoulders-display/700.css";
+@import "@fontsource/big-shoulders-display/800.css";
+@import "@fontsource/big-shoulders-display/900.css";
+
+/* ------------------------------------------------------------------
+   NEXT MISSION FITNESS — design tokens
+   Black + red sampled directly from NMF_Logo_Black.PNG (#000000 / #DE0616).
+   Steel grays added for layering so the site isn't flat black-on-black.
+------------------------------------------------------------------- */
+:root {
+  --color-nmf-black: #000000;
+  --color-nmf-steel: #17181b;
+  --color-nmf-steel-light: #2a2d31;
+  --color-nmf-red: #de0616;
+  --color-nmf-red-dim: #9c0510;
+  --color-nmf-white: #ffffff;
+  --color-nmf-off: #ededed;
+  --color-nmf-mute: #8a8d93;
+}
+
+@theme inline {
+  --color-nmf-black: var(--color-nmf-black);
+  --color-nmf-steel: var(--color-nmf-steel);
+  --color-nmf-steel-light: var(--color-nmf-steel-light);
+  --color-nmf-red: var(--color-nmf-red);
+  --color-nmf-red-dim: var(--color-nmf-red-dim);
+  --color-nmf-white: var(--color-nmf-white);
+  --color-nmf-off: var(--color-nmf-off);
+  --color-nmf-mute: var(--color-nmf-mute);
+
+  --font-display: "Big Shoulders Display", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-nmf-black);
+  color: var(--color-nmf-off);
+  font-family: var(--font-sans);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Signature motif: "The Cut" — the diagonal parallelogram cut taken
+   from the NMF mark itself, reused across buttons, cards and media
+   so it reads as one deliberate system instead of decoration.
+------------------------------------------------------------------- */
+.cut-br {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 22px), calc(100% - 22px) 100%, 0 100%);
+}
+.cut-tl {
+  clip-path: polygon(22px 0, 100% 0, 100% 100%, 0 100%, 0 22px);
+}
+.cut-br-sm {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+}
+
+.hero-slash {
+  clip-path: polygon(28% 0, 100% 0, 100% 100%, 8% 100%);
+}
+
+.tag-rule {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.tag-rule::before,
+.tag-rule::after {
+  content: "";
+  height: 1px;
+  flex: 1 1 auto;
+  background: var(--color-nmf-red);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@keyframes logo-reveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.94) translateY(10px);
+    clip-path: inset(0 100% 0 0);
+  }
+  55% {
+    clip-path: inset(0 0% 0 0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    clip-path: inset(0 0% 0 0);
+  }
+}
+.animate-logo-reveal {
+  animation: logo-reveal 1.15s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-nmf-red);
+  outline-offset: 3px;
+}
+
+/* ------------------------------------------------------------------
+   Premium polish pass
+------------------------------------------------------------------- */
+
+/* Film grain — keeps large black fields from reading flat/cheap */
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%25" height="100%25" filter="url(%23n)"/></svg>');
+}
+
+/* Slow ambient glow used behind the full-screen hero */
+@keyframes ambient-glow {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.12);
+  }
+}
+.ambient-glow {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(110px);
+  background: radial-gradient(circle, var(--color-nmf-red) 0%, transparent 70%);
+  animation: ambient-glow 9s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Hover depth for cards — subtle lift + red-tinted glow, not a generic shadow */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px -12px rgba(222, 6, 22, 0.28);
+}
+
+/* Scroll reveal, driven by the Reveal component toggling data-visible */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-glow {
+    animation: none;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .scroll-hint {
+    animation: none;
+  }
+}
+
+@keyframes mark-drift {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg) translateY(0);
+  }
+  50% {
+    transform: scale(1.05) rotate(0.6deg) translateY(-18px);
+  }
+}
+.mark-drift {
+  animation: mark-drift 11s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mark-drift {
+    animation: none;
+  }
+}
+
+@keyframes soft-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+.scroll-hint {
+  animation: soft-bounce 2.2s ease-in-out infinite;
+}
