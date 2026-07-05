@@ -22,7 +22,7 @@ export default function Nav() {
             alt="Next Mission Fitness"
             width={160}
             height={107}
-            className="h-10 w-auto"
+            className="h-20 w-auto"
             priority
           />
         </Link>
