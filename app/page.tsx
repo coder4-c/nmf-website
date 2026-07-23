@@ -56,7 +56,7 @@ const formats = [
 export default function Home() {
   return (
     <>
-      {/* HERO — full-screen, ambient glow, no watermark risk (built, not filmed) */}
+      {/* HERO - full-screen, ambient glow, no watermark risk (built, not filmed) */}
       <section className="relative flex min-h-screen flex-col justify-center overflow-hidden border-b border-nmf-steel-light">
         <div className="hero-slash pointer-events-none absolute inset-y-0 right-0 w-full bg-nmf-red/[0.07] sm:w-3/4" />
         <div
@@ -80,7 +80,7 @@ export default function Home() {
 
         <div className="relative mx-auto w-full max-w-6xl px-6 py-24">
           <div className="tag-rule max-w-xl">
-            <span className="shrink-0 font-mono text-xs uppercase tracking-[0.2em] text-nmf-red">
+            <span className="font-mono text-xs uppercase tracking-[0.2em] text-nmf-red whitespace-normal break-words">
               {positioning.join(" · ")}
             </span>
           </div>
@@ -93,7 +93,7 @@ export default function Home() {
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-nmf-off">
             Structured fitness and nutrition coaching that helps you build a
-            stronger body, healthier habits, and measurable results —
+            stronger body, healthier habits, and measurable results
             through customized programming, accountability, and disciplined
             progression.
           </p>
@@ -101,13 +101,13 @@ export default function Home() {
           <div className="mt-9 flex flex-wrap gap-4">
             <Link
               href="/apply"
-              className="cut-br bg-nmf-red px-8 py-4 font-mono text-sm font-semibold uppercase tracking-[0.15em] text-nmf-white transition-all hover:-translate-y-0.5 hover:bg-nmf-red-dim hover:shadow-[0_16px_40px_-12px_rgba(222,6,22,0.45)]"
+              className="cut-br bg-nmf-red px-8 py-4 font-mono text-sm font-semibold uppercase tracking-[0.15em] text-nmf-white transition-all hover:-translate-y-0.5 hover:bg-nmf-red-dim hover:shadow-[0_16px_40px_-12px_rgba(222,6,22,0.45)] block w-full sm:inline-block sm:w-auto text-center"
             >
               Start Your Mission
             </Link>
             <Link
               href="/services"
-              className="cut-br border border-nmf-steel-light px-8 py-4 font-mono text-sm font-semibold uppercase tracking-[0.15em] text-nmf-off transition-all hover:-translate-y-0.5 hover:border-nmf-red hover:text-nmf-red"
+              className="cut-br border border-nmf-steel-light px-8 py-4 font-mono text-sm font-semibold uppercase tracking-[0.15em] text-nmf-off transition-all hover:-translate-y-0.5 hover:border-nmf-red hover:text-nmf-red block w-full sm:inline-block sm:w-auto text-center"
             >
               See Coaching Options
             </Link>
@@ -125,7 +125,7 @@ export default function Home() {
         </a>
       </section>
 
-      {/* HOW IT WORKS — genuinely sequential, numbering earns its place */}
+      {/* HOW IT WORKS - genuinely sequential, numbering earns its place */}
       <section id="how-it-works" className="border-b border-nmf-steel-light bg-nmf-steel/40">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <Reveal>
@@ -163,7 +163,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOCUS AREAS — not sequential, plain grid */}
+      {/* FOCUS AREAS - not sequential, plain grid */}
       <section id="focus-areas" className="border-b border-nmf-steel-light">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <Reveal>
@@ -223,7 +223,7 @@ export default function Home() {
                 {[
                   {
                     t: "Structured Programming",
-                    d: "Plans built around your goals, lifestyle, and resources — not a template.",
+                    d: "Plans built around your goals, lifestyle, and resources - not a template.",
                   },
                   {
                     t: "Real Accountability",
@@ -325,7 +325,7 @@ export default function Home() {
           </p>
           <Link
             href="/apply"
-            className="cut-br mt-8 inline-block bg-nmf-red px-9 py-4 font-mono text-sm font-semibold uppercase tracking-[0.15em] text-nmf-white transition-all hover:-translate-y-0.5 hover:bg-nmf-red-dim hover:shadow-[0_16px_40px_-12px_rgba(222,6,22,0.45)]"
+            className="cut-br mt-8 inline-block bg-nmf-red px-9 py-4 font-mono text-sm font-semibold uppercase tracking-[0.15em] text-nmf-white transition-all hover:-translate-y-0.5 hover:bg-nmf-red-dim hover:shadow-[0_16px_40px_-12px_rgba(222,6,22,0.45)] w-full sm:w-auto text-center"
           >
             Start Your Mission
           </Link>

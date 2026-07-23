@@ -53,7 +53,7 @@ export function SectionHeading({ index, title }: { index: number; title: string 
   return (
     <div className="tag-rule mb-6 mt-14 first:mt-0">
       <span className="shrink-0 font-mono text-xs uppercase tracking-[0.2em] text-nmf-red">
-        {String(index).padStart(2, "0")} — {title}
+        {String(index).padStart(2, "0")} - {title}
       </span>
     </div>
   );

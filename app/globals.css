@@ -12,7 +12,7 @@
 @import "@fontsource/big-shoulders-display/900.css";
 
 /* ------------------------------------------------------------------
-   NEXT MISSION FITNESS — design tokens
+   NEXT MISSION FITNESS - design tokens
    Black + red sampled directly from NMF_Logo_Black.PNG (#000000 / #DE0616).
    Steel grays added for layering so the site isn't flat black-on-black.
 ------------------------------------------------------------------- */
@@ -64,7 +64,7 @@ body {
 }
 
 /* ------------------------------------------------------------------
-   Signature motif: "The Cut" — the diagonal parallelogram cut taken
+   Signature motif: "The Cut" - the diagonal parallelogram cut taken
    from the NMF mark itself, reused across buttons, cards and media
    so it reads as one deliberate system instead of decoration.
 ------------------------------------------------------------------- */
@@ -127,7 +127,7 @@ body {
    Premium polish pass
 ------------------------------------------------------------------- */
 
-/* Film grain — keeps large black fields from reading flat/cheap */
+/* Film grain - keeps large black fields from reading flat/cheap */
 .grain-overlay {
   position: fixed;
   inset: 0;
@@ -159,7 +159,7 @@ body {
   pointer-events: none;
 }
 
-/* Hover depth for cards — subtle lift + red-tinted glow, not a generic shadow */
+/* Hover depth for cards - subtle lift + red-tinted glow, not a generic shadow */
 .hover-lift {
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
@@ -223,4 +223,10 @@ body {
 }
 .scroll-hint {
   animation: soft-bounce 2.2s ease-in-out infinite;
+}
+
+/* Ensure images scale down on small screens */
+img {
+  max-width: 100%;
+  height: auto;
 }

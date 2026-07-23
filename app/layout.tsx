@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Next Mission Fitness | Stronger Today. Better Tomorrow.",
   description:
     "Veteran-owned fitness and nutrition coaching in San Antonio, TX and online nationwide. Structured programming, accountability, and disciplined progression.",
+  viewport: 'width=device-width, initial-scale=1',
 };
 
 export default function RootLayout({

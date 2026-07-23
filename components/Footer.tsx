@@ -26,11 +26,11 @@ export default function Footer() {
               alt="Next Mission Fitness"
               width={200}
               height={133}
-              className="h-14 w-auto"
+              className="h-auto w-auto max-h-10 md:max-h-14"
             />
             <p className="mt-4 max-w-sm text-sm text-nmf-mute">
               Veteran-owned fitness and nutrition coaching. Structured
-              programming, accountability, and disciplined progression —
+              programming, accountability, and disciplined progression -
               serving San Antonio, TX in person and clients nationwide online.
             </p>
             <div className="mt-5 flex gap-4 font-mono text-xs uppercase tracking-[0.15em]">

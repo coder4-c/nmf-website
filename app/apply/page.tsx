@@ -81,7 +81,7 @@ export default function ApplyPage() {
     <div className="mx-auto max-w-2xl px-6 py-16 sm:py-24">
       <div className="tag-rule">
         <span className="shrink-0 font-mono text-xs uppercase tracking-[0.2em] text-nmf-red">
-          Step 1 of 9 — Start Your Mission
+          Step 1 of 9 - Start Your Mission
         </span>
       </div>
       <h1 className="font-display mt-5 text-4xl font-black uppercase tracking-tight text-nmf-white sm:text-5xl">
@@ -196,7 +196,7 @@ export default function ApplyPage() {
         <button
           type="submit"
           disabled={status === "submitting"}
-          className="cut-br bg-nmf-red px-8 py-4 font-mono text-sm font-semibold uppercase tracking-[0.15em] text-nmf-white transition-colors hover:bg-nmf-red-dim disabled:cursor-not-allowed disabled:opacity-60 enabled:cursor-pointer"
+          className="cut-br bg-nmf-red px-8 py-4 font-mono text-sm font-semibold uppercase tracking-[0.15em] text-nmf-white transition-colors hover:bg-nmf-red-dim disabled:cursor-not-allowed disabled:opacity-60 enabled:cursor-pointer w-full sm:w-auto"
         >
           {status === "submitting" ? "Sending..." : "Submit Application"}
         </button>

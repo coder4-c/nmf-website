@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 // STUB ENDPOINT: validates and logs the application.
-// Wire this up to real delivery before launch — e.g. send via an email
+// Wire this up to real delivery before launch - e.g. send via an email
 // provider (Resend/SendGrid), push to a CRM, or write to MongoDB the same
 // way the e-commerce project connects to Atlas.
 export async function POST(request: Request) {

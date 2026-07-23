@@ -142,7 +142,7 @@ export default function IntakePage() {
         Tell Us Everything
       </h1>
       <p className="mt-4 max-w-xl text-nmf-off">
-        The more we know, the better your plan. This takes about 10 minutes —
+        The more we know, the better your plan. This takes about 10 minutes -
         already enrolled clients complete this after their consultation.
       </p>
 
@@ -385,7 +385,7 @@ export default function IntakePage() {
         <button
           type="submit"
           disabled={status === "submitting"}
-          className="cut-br mt-10 bg-nmf-red px-8 py-4 font-mono text-sm font-semibold uppercase tracking-[0.15em] text-nmf-white transition-colors hover:bg-nmf-red-dim disabled:cursor-not-allowed disabled:opacity-60 enabled:cursor-pointer"
+          className="cut-br mt-10 bg-nmf-red px-8 py-4 font-mono text-sm font-semibold uppercase tracking-[0.15em] text-nmf-white transition-colors hover:bg-nmf-red-dim disabled:cursor-not-allowed disabled:opacity-60 enabled:cursor-pointer w-full sm:w-auto"
         >
           {status === "submitting" ? "Submitting..." : "Submit Intake Form"}
         </button>

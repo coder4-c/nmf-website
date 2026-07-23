@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Services | Next Mission Fitness",
   description:
-    "Online, in-person, and hybrid fitness and nutrition coaching. Consultation-first — programs start as low as $125.",
+    "Online, in-person, and hybrid fitness and nutrition coaching. Consultation-first - programs start as low as $125.",
 };
 
 const focusAreas = [
@@ -47,7 +47,7 @@ const included = [
 const faqs = [
   {
     q: "How much does coaching cost?",
-    a: "Coaching programs start as low as $125. Final pricing depends on the service and level of support you need, and is confirmed after a short consultation — not before.",
+    a: "Coaching programs start as low as $125. Final pricing depends on the service and level of support you need, and is confirmed after a short consultation - not before.",
   },
   {
     q: "Do I have to talk to someone before signing up?",
@@ -75,7 +75,7 @@ export default function ServicesPage() {
         Coaching built around your mission
       </h1>
       <p className="mt-5 max-w-2xl text-lg leading-relaxed text-nmf-off">
-        Every program starts with a consultation, not a price tag — so the
+        Every program starts with a consultation, not a price tag - so the
         plan actually fits your goals, lifestyle, and experience level.
       </p>
 
@@ -132,7 +132,7 @@ export default function ServicesPage() {
           <p className="mt-3 text-3xl font-black text-nmf-red">Starting at $125</p>
           <p className="mt-3 text-sm leading-relaxed text-nmf-mute">
             Final pricing depends on the selected service and level of
-            support. A consultation comes first — no full pricing list is
+            support. A consultation comes first - no full pricing list is
             published, so your recommendation is built for you.
           </p>
           <Link

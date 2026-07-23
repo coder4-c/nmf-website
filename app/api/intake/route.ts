@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 // STUB ENDPOINT: validates and logs the intake submission.
-// Contains health/nutrition information — before going live, route this
+// Contains health/nutrition information - before going live, route this
 // somewhere that meets the confidentiality commitments in the Privacy
 // Policy (e.g. an encrypted DB write, not a plain email).
 export async function POST(request: Request) {
