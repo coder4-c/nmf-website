@@ -15,9 +15,10 @@
     :root {
       --black: #000000;
       --ink: #ffffff;
-      --red: #e10a1d;
-      --red-deep: #4a0006;
-      --line: rgba(255, 255, 255, 0.12);
+      --dim: rgba(255, 255, 255, 0.5);
+      --panel-top: #2a2a2a;
+      --panel-bottom: #0e0e0e;
+      --line: rgba(255, 255, 255, 0.14);
 
       --display: "Anton", "Bebas Neue", Impact, "Arial Narrow", sans-serif;
       --mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
@@ -51,8 +52,8 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(60% 55% at 85% 22%, rgba(190, 8, 24, 0.55), transparent 70%),
-        linear-gradient(160deg, #1a0003 0%, var(--red-deep) 60%, #120002 100%);
+        radial-gradient(60% 55% at 85% 22%, rgba(255, 255, 255, 0.16), transparent 70%),
+        linear-gradient(160deg, var(--panel-top) 0%, #1a1a1a 55%, var(--panel-bottom) 100%);
       clip-path: polygon(46% 0, 100% 0, 100% 100%, 30% 100%);
       z-index: 0;
     }
@@ -67,7 +68,7 @@
       letter-spacing: -0.02em;
       transform: skewX(-12deg);
       color: transparent;
-      background: linear-gradient(90deg, rgba(255,255,255,0.10) 0 33%, rgba(225,10,29,0.22) 33% 66%, rgba(255,255,255,0.08) 66% 100%);
+      background: linear-gradient(90deg, rgba(255,255,255,0.10) 0 33%, rgba(255,255,255,0.20) 33% 66%, rgba(255,255,255,0.07) 66% 100%);
       -webkit-background-clip: text;
       background-clip: text;
       pointer-events: none;
@@ -107,7 +108,7 @@
       letter-spacing: 0.06em;
       text-transform: uppercase;
     }
-    .brand .name em { font-style: normal; color: var(--red); }
+    .brand .name em { font-style: normal; color: var(--dim); }
 
     main {
       flex: 1;
@@ -126,7 +127,7 @@
       text-transform: uppercase;
     }
     h1 span { display: block; }
-    h1 .red { color: var(--red); }
+    h1 .dim { color: var(--dim); }
 
     .hero p {
       max-width: 32em;
@@ -167,8 +168,8 @@
     <main>
       <div class="wrap hero">
         <h1>
-          <span>Website Under</span>
-          <span class="red">Maintenance</span>
+          <span class="dim">Website Under</span>
+          <span>Maintenance</span>
         </h1>
 
         <p>We are currently performing scheduled maintenance and updates on this website.</p>
